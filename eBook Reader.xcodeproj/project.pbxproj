@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		594C4F5225AD5C160092BD2C /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594C4F5125AD5C160092BD2C /* CustomNavigationView.swift */; };
 		59F0634725AC115900AC5464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F0634625AC115900AC5464 /* AppDelegate.swift */; };
 		59F0634925AC115900AC5464 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F0634825AC115900AC5464 /* SceneDelegate.swift */; };
 		59F0634B25AC115900AC5464 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F0634A25AC115900AC5464 /* ContentView.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		594C4F5125AD5C160092BD2C /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 		59F0634325AC115900AC5464 /* eBook Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eBook Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59F0634625AC115900AC5464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59F0634825AC115900AC5464 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				59F0635E25AC11F200AC5464 /* Home.swift */,
 				59F0637025AC399300AC5464 /* WebView.swift */,
+				594C4F5125AD5C160092BD2C /* CustomNavigationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				59F0636325AC120600AC5464 /* BookModel.swift in Sources */,
 				59F0634725AC115900AC5464 /* AppDelegate.swift in Sources */,
 				59F0634925AC115900AC5464 /* SceneDelegate.swift in Sources */,
+				594C4F5225AD5C160092BD2C /* CustomNavigationView.swift in Sources */,
 				59F0635F25AC11F200AC5464 /* Home.swift in Sources */,
 				59F0634B25AC115900AC5464 /* ContentView.swift in Sources */,
 				59F0636625AC121200AC5464 /* BookViewModel.swift in Sources */,
@@ -343,6 +347,7 @@
 				DEVELOPMENT_TEAM = 35J9KU527J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "eBook Reader/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -364,6 +369,7 @@
 				DEVELOPMENT_TEAM = 35J9KU527J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "eBook Reader/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

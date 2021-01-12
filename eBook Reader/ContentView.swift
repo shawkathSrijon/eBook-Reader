@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = BookViewModel(searchText: "harry+potter")
+
     var body: some View {
-        NavigationView {
-            Home()
-                .navigationTitle("Books")
+        CustomNavigationView(view: AnyView(Home(viewModel: viewModel)), placeHolder: "Search", largeTitle: true, title: "Books") { (text) in
+            if text != "" {
+                BookViewModel(searchText: text.lowercased().replacingOccurrences(of: " ", with: "+"))
+            }
+        } onCancel: {
+            BookViewModel(searchText: "harry+potter")
         }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

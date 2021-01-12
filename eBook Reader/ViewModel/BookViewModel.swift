@@ -11,8 +11,9 @@ import SwiftyJSON
 class BookViewModel: ObservableObject {
     @Published var model = BookModel()
     
-    init() {
-        let url = "https://www.googleapis.com/books/v1/volumes?q=harry+potter"
+    init(searchText: String) {
+        let url = "https://www.googleapis.com/books/v1/volumes?q=\(searchText)"
+        print(url)
         
         let session = URLSession(configuration: .default)
         session.dataTask(with: URL(string: url)!) { (resp, _, error) in
@@ -34,14 +35,18 @@ class BookViewModel: ObservableObject {
                 let description = item["volumeInfo"]["description"].stringValue
                 let imurl = item["volumeInfo"]["imageLinks"]["thumbnail"].stringValue
                 let webReaderLink = item["volumeInfo"]["previewLink"].stringValue
-                print(webReaderLink)
-                
+                print(title)
                 DispatchQueue.main.async {
                     self.model.books.append(BookModel.Book(id: id, title: title, authors: author, desc: description, imurl: imurl, url: webReaderLink))
                 }
             }
         }
         .resume()
+        
+        // For testing
+        for i in model.books {
+            print(i.title)
+        }
     }
     
     //MARK:- Access to the model
